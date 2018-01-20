@@ -9,6 +9,9 @@
   },
   "repository": "jgranstrom/babel-plugin-sass-extract",
   "author": "John Granström <granstrom.john@gmail.com>",
+  "contributors": [
+    "James G. Kim <jgkim@jayg.org>"
+  ],
   "keywords": [
     "babel",
     "plugin",
@@ -26,7 +29,7 @@
     "node": ">=4"
   },
   "peerDependencies": {
-    "sass-extract": "^0.5.0"
+    "sass-extract": "^2.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -39,6 +42,6 @@
     }
   },
   "dependencies": {
-    "babel-literal-to-ast": "^0.1.2"
+    "babel-literal-to-ast": "^1.0.0"
   }
 }

@@ -8,12 +8,21 @@ function getRequiredFilePath(requiringPath, requiredPath) {
   return path.posix.resolve(path.posix.join(path.posix.dirname(requiringPath), requiredPath));
 }
 
-function extractVariables(absolutePath, compiledFiles, options) {
+function extractVariables(absolutePath, compiledFiles, options = {}) {
   let vars;
   if(compiledFiles[absolutePath]) {
     vars = compiledFiles[absolutePath];
   } else {
-    vars = compiledFiles[absolutePath] = sassExtract.renderSync(Object.assign({}, options, { file: absolutePath })).vars;
+    const compileOptions = Object.assign({}, options.compileOptions || {}, { file: absolutePath });
+    const extractOptions = Object.assign({}, options.extractOptions || { plugins: ['minimal'] });
+
+    (extractOptions.plugins || []).forEach(plugin => {
+      if (['serialize', 'compact', 'minimal', 'filter'].some(name => name === plugin)) {
+        require(`sass-extract/lib/plugins/${plugin}`);
+      }
+    });
+
+    vars = compiledFiles[absolutePath] = sassExtract.renderSync(compileOptions, extractOptions).vars;
   }
 
   return vars;

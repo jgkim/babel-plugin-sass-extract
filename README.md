@@ -6,6 +6,16 @@ Require sass files and get an object containing extracted sass variables. Suppor
 
 **Note** that this is an early prototype.
 
+## Options
+
+### compileOptions
+
+Same as `node-sass` options, defaults to `{}`.
+
+### extractOptions
+
+Same as that of `sass-extract`, defaults to `{ plugins: ['minimal'] }`.
+
 ## Install
 
 You need to install the sass compiler, sass-extract and the plugin since they are all [peer dependencies](https://nodejs.org/en/blog/npm/peer-dependencies/).

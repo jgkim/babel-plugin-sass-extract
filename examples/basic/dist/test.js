@@ -1,24 +1,14 @@
-const styleVars1 = {
+'use strict';
+
+var styleVars1 = {
   'global': {
-    '$a': {
-      'type': 'SassNumber',
-      'value': 123,
-      'unit': 'px',
-      'sources': ['/Users/John/code/babel-plugin-sass-extract/examples/basic/test.scss'],
-      'expressions': ['123px']
-    }
+    '$a': '123px'
   }
 };
 
-const styleVars2 = {
+var styleVars2 = {
   'global': {
-    '$a': {
-      'type': 'SassNumber',
-      'value': 123,
-      'unit': 'px',
-      'sources': ['/Users/John/code/babel-plugin-sass-extract/examples/basic/test.scss'],
-      'expressions': ['123px']
-    }
+    '$a': '123px'
   }
 };
 

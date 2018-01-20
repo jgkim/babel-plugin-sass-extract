@@ -7,14 +7,16 @@
     "start": "babel --out-dir ./dist test.js && node ./dist/test.js"
   },
   "author": "John Granström <granstrom.john@gmail.com>",
+  "contributors": [
+    "James G. Kim <jgkim@jayg.org>"
+  ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
-    "node-sass": "^4.5.3",
-    "sass-extract": "^0.5.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1"
+    "babel-plugin-sass-extract": "^0.1.0",
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.7.2",
+    "sass-extract": "^2.1.0"
   }
 }
